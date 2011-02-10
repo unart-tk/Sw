@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.2.5" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock {
+  margin-right: 0%;
+}
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+div.olist2 ol {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hlist td {
+  padding-bottom: 5px;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onload = function(){generateToc(2)}
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, October 2006. License: GPL */
+
+function getText(el) {
+  var text = "";
+  for (var i = el.firstChild; i != null; i = i.nextSibling) {
+    if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+      text += i.data;
+    else if (i.firstChild != null)
+      text += getText(i);
+  }
+  return text;
+}
+
+function TocEntry(el, text, toclevel) {
+  this.element = el;
+  this.text = text;
+  this.toclevel = toclevel;
+}
+
+function tocEntries(el, toclevels) {
+  var result = new Array;
+  var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+  // Function that scans the DOM tree for header elements (the DOM2
+  // nodeIterator API would be a better technique but not supported by all
+  // browsers).
+  var iterate = function (el) {
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+        var mo = re.exec(i.tagName)
+        if (mo)
+          result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+        iterate(i);
+      }
+    }
+  }
+  iterate(el);
+  return result;
+}
+
+// This function does the work. toclevels = 1..4.
+function generateToc(toclevels) {
+  var toc = document.getElementById("toc");
+  var entries = tocEntries(document.getElementsByTagName("body")[0], toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "toc" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    document.getElementById("header").removeChild(toc);
+}
+/*]]>*/
+</script>
+<title>Etangle</title>
+</head>
+<body>
+<div id="header">
+<h1>Etangle</h1>
+<span id="author">Filippo Erik Negroni</span><br />
+<span id="email"><tt>&lt;<a href="mailto:f.e.negroni@googlemail.com">f.e.negroni@googlemail.com</a>&gt;</tt></span><br />
+Version 9.10
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="para"><p>Tangle AsciiDoc documents with embedded code snippets.
+Written in Python 3.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;copyright&gt;=
+Copyright (C) 2009 Filippo Erik Negroni
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;</tt></pre>
+</div></div>
+</div>
+</div>
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="para"><p>Etangle collects and reorders <em>code snippets</em> and writes them out into source code modules.</p></div>
+<div class="para"><p>The code snippets Etangle looks for are embedded within the <em>listing blocks</em> of an AsciiDoc document.</p></div>
+<h3 id="_embedding_code_snippets">Embedding code snippets</h3><div style="clear:left"></div>
+<div class="para"><p>An AsciiDoc listing block consists of any number of lines between two delimiters: the two delimiters are identical lines, usually four dashes, one at the beginning and one at the end of the block.</p></div>
+<div class="para"><p>When rendering a document, AsciiDoc simply copies the contents of any listing block without any of the usual formatting: any content that might look like an AsciiDoc keyword will not be interpreted by AsciiDoc when rendering.</p></div>
+<div class="para"><p>The listing block is therefore the ideal place where to embed code snippets, since AsciiDoc will still render the blocks correctly without the use of any eWEB tools.</p></div>
+<div class="para"><p>For a listing block to be identified as an eWEB code snippet, the first line of content must be a WEB directive.</p></div>
+</div>
+<h2 id="_general_requirements">General requirements</h2>
+<div class="sectionbody">
+<div class="para"><p>This is the first version of Etangle extracted from an eWEB document using the bootstrap version of Etangle.</p></div>
+<div class="para"><p>The requirements are therefore the same as for the bootstrap version.</p></div>
+<div class="para"><p>To produce one single source code module, unnamed, composed of all the code snippets, in the correct order.</p></div>
+<div class="para"><p>The content of each code snippet is scanned for references to other code snippets, so that the correct order is produced.</p></div>
+<div class="para"><p>We are also not concerned about various issues: scalability, performance, robustness.</p></div>
+<div class="para"><p>The supported eWEB directives are:</p></div>
+<div class="olist"><ol>
+<li>
+<p>
+root code snippet definition-extension: <tt>&lt;*&gt;=</tt>
+</p>
+</li>
+<li>
+<p>
+named code snippet definition-extension: <tt>&lt;name&gt;=</tt>
+</p>
+</li>
+<li>
+<p>
+named code snippet reference: <tt>&lt;name&gt;</tt>
+</p>
+</li>
+</ol></div>
+</div>
+<h2 id="_overall_strategy">Overall strategy</h2>
+<div class="sectionbody">
+<div class="para"><p>Scan input for listing blocks, for each listing block, scan the first line for a recognised eWEB directive.</p></div>
+<div class="para"><p>Only definition-extension directives (<tt>&lt;&#8230;&gt;=</tt>) are supported on the first line of a code snippet. Any spaces after <tt>=</tt> are ignored, but nothing else can follow <tt>=</tt> other than spaces and the newline character.</p></div>
+<div class="para"><p>If we don't recognise the directive, we skip the listing block entirely.</p></div>
+<div class="para"><p>If we do recognise the directive, we extract the name, which could be an asterisk <tt>*</tt> for the root code snippet, and we then associate the content of the snippet with its name.</p></div>
+<div class="para"><p>If we encounter the same definition again, we extend it, not replace it. This behaviour will change later when we support re-definition and extension.</p></div>
+<div class="para"><p>A code snippet might have reference directives within itself, but we do not resolve them until we have scanned the entire document and identified every snippet.</p></div>
+<div class="para"><p>Once the document has entirely been scanned, and all code snippets been identified, we can then proceed to produce the output.</p></div>
+<h3 id="_one_output_module">One output module</h3><div style="clear:left"></div>
+<div class="para"><p>Since we only process one document and produce one source module, we are going to simply read the input document from standard input and write one source code module on standard output.</p></div>
+<div class="para"><p>To write the output, we start writing the content of the root code snippet.</p></div>
+<div class="para"><p>For each code snippet, including the root one, we resolve any reference directive and we proceed until all references are resolved.</p></div>
+</div>
+<h2 id="_collecting_code_snippets">Collecting code snippets</h2>
+<div class="sectionbody">
+<div class="para"><p>The most appropriate data structure for the purpose of storing and retrieving code snippets by name is a <strong>map</strong>, which Python provides as a built in type. The accessor methods provided by the language are also sufficient for our purposes at this stage.</p></div>
+<div class="para"><p>The <tt>snippets</tt> global identifier will contain all the code snippets, and will start life as an empty builtin dictionary type.</p></div>
+<div class="para"><p>The <tt>dict</tt> type in Python provides the easiest way to code a map. It is also very basic and we need to keep this in mind for scalability and performance in the future.</p></div>
+<div class="para"><p>A couple of notes about the built in <tt>dict</tt> type.</p></div>
+<div class="para"><p>First, <tt>dict</tt> will replace the value associated to a key when a new assignment to the same key is made.</p></div>
+<div class="para"><p>Second, trying to retrieve a non-existent key raises an exception.</p></div>
+<div class="para"><p>To that effect, there exists a <tt>defaultdict</tt> type which will ensure we always match a key upon retrieval: a default value will be returned instead of an exception when a key we try to retrieve is missing from the map.</p></div>
+<h3 id="_internal_representation_of_a_code_snippet">Internal representation of a code snippet</h3><div style="clear:left"></div>
+<div class="para"><p>In order to use <tt>defaultdict</tt>, we need to establish the suitable default value.</p></div>
+<div class="para"><p>To establish it, we must think of what type of values will be stored against a key in the map of code snippets.</p></div>
+<div class="para"><p>When we retrieve the contents of a listing block, the result will be a collection of lines of text. In particular, most Python standard libraries deal with text on a line basis. Text files are accessed as collections of lines.</p></div>
+<div class="para"><p>By storing the content of each code snippet as a collection of lines, such collection can be extended by the content of another code snippet with the same name.</p></div>
+<div class="para"><p>We could therefore infer that the default value of a code snippet is an empty list.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;snippets-map-definition&gt;=
+snippets = collections.defaultdict(list)</tt></pre>
+</div></div>
+<div class="para"><p>To use <tt>defaultdict</tt> we must import the associated module.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;imports&gt;=
+import collections</tt></pre>
+</div></div>
+</div>
+<h2 id="_scanning_for_listing_blocks">Scanning for listing blocks</h2>
+<div class="sectionbody">
+<div class="para"><p>All eWEB documents are AsciiDoc documents with special embedded WEB directives inside listing blocks.</p></div>
+<div class="para"><p>Therefore, every eWEB document is a text file: a collection of lines of text.</p></div>
+<div class="para"><p>Python's standard library sees a text file in exactly this way, and the builtin types make dealing with AsciiDoc documents very easy, if not necessarily fast or scalable.</p></div>
+<div class="para"><p>We also conveniently described that from a data abstraction point of view, each code snippet is a list of lines of text, with an associated name, all stored in a map.</p></div>
+<div class="para"><p>When scanning for listing blocks, we are therefore going to try and keep the granularity at the text line level.</p></div>
+<div class="para"><p>Just like in the bootstrap version, Etangle will only process one document. For simplicity, this document comes from the standard input.</p></div>
+<div class="para"><p>This means we do not need to perform any file management operations such as opening and closing files.</p></div>
+<div class="para"><p><tt>stdin</tt> is available as a member of module <tt>sys</tt>, so we import it:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;imports&gt;=
+import sys</tt></pre>
+</div></div>
+<h3 id="_scanning_algorithm">Scanning algorithm</h3><div style="clear:left"></div>
+<div class="para"><p>At first we scan each line until we find the beginning of a listing block: four dashes <tt>----</tt> in the default AsciiDoc configuration.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">AsciiDoc custom configuration</div>
+<div class="para"><p>AsciiDoc can be customised by the end user to the extent of modifying some of the markups. In particular, a user could modify which markup delimits a listing block.</p></div>
+<div class="para"><p>Although the current version only supports the default markup, a future version will support either a command line option, or the ability to read the AsciiDoc configuration file.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="para"><p>When we enter a listing block, we must scan the first line.</p></div>
+<div class="para"><p>If the first line is a recognised and allowed WEB directive, we analise the command and behave accordingly.</p></div>
+<div class="para"><p>Unfortunately in Python, <tt>readline()</tt> and <tt><em>next</em>()</tt> are mutually exclusive on the same file object.</p></div>
+<div class="para"><p>To use the <em>for loop</em> style iteration on a file (using <tt><em>next</em>()</tt>), we must define a finite state automata, with a state variable that is used on each iteration to determine what to do next.</p></div>
+<div class="para"><p>If we instead use <tt>readline()</tt>, we can make additional calls to it within the inner loops.</p></div>
+<div class="para"><p>For simplicity, we will use the <tt>readline()</tt> approach.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;input-scan-loop&gt;=
+line = sys.stdin.readline()
+while line:
+    if line == '----\n':
+        process_listing_block()
+    line = sys.stdin.readline()</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">scanning sys.stdin directly gives back lines with their newline. input() on the other hand returns lines without the newline character at the end.</td>
+</tr></table>
+</div>
+<div class="para"><p><tt>process_listing_block()</tt> is responsible for scanning the block and determine if it's a snippet.</p></div>
+<div class="para"><p>To qualify as an eWEB code snippet, the first line of the listing block must be an allowed WEB directive.</p></div>
+<div class="para"><p>These are expressed very formally using regular expressions, but can be summarised as having a name part (which can be empty) in between angle brackets (<tt>&lt;</tt> and <tt>&gt;</tt>) and an additional character which determines the action to perform.</p></div>
+<div class="para"><p>Etangle, in this version, only supports the definition-extension directive, which is identified by having the single equal sign at the end (<tt>=</tt>).</p></div>
+<div class="para"><p>So the regular expression in Python becomes:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;web-definition-extension-directive-regex&gt;=
+WEB_DEFINITION_EXTENSION = r'''^&lt;(\*|[-\w]+)&gt;=\s*$'''</tt></pre>
+</div></div>
+<div class="para"><p>If the first line matches a WEB definition-extension directive, we save the name of the snippet, we save the lines that follow (zero or more) in a collection until we see the end of the listing block, at which point we add the snippet to the map.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;process_listing_block-definition&gt;=
+def process_listing_block():
+    &lt;web-definition-extension-directive-regex&gt;
+    line = sys.stdin.readline()
+    m = re.match(WEB_DEFINITION_EXTENSION,line)
+    if not m:
+        return
+    name = m.group(1)
+    lines = []
+    line = sys.stdin.readline()
+    while line and line != '----\n':
+        lines.append(line)
+        line = sys.stdin.readline()
+    snippets[name].extend(lines)</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">The assumption is that <tt>snippets</tt> is a <tt>defualtdict</tt>: in the code, we try and extend a code snippet, assuming it is already present in the map. <tt>snippets</tt> will create a new key with an empty list as its value when we try to extend a non existing snippet.</td>
+</tr></table>
+</div>
+<div class="para"><p>We must import the regular expression module for <tt>process_listing_block()</tt> to work.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;imports&gt;=
+import re</tt></pre>
+</div></div>
+</div>
+<h2 id="_output">Output</h2>
+<div class="sectionbody">
+<div class="para"><p>Once the input has been processed by the input scanning loop routine, we can start printing the code snippets in the correct order, starting from the <em>root</em> snippet, identified by its name, an <tt>*</tt> (asterisk).</p></div>
+<div class="para"><p>Remember that our snippets dictionary succeeds when looking for snippets that don't exist, essentially returning empty lists for them.</p></div>
+<div class="para"><p>The nature of printing code snippets is recursive:</p></div>
+<div class="para"><p>Each line in a code snippet must be analysed.</p></div>
+<div class="para"><p>If the line is a reference directive, we must retrieve the referenced code snippet and recursively resolve any references with it.</p></div>
+<div class="para"><p>If a line is <strong>not</strong> a code snippet, we just print it.</p></div>
+<div class="para"><p>To this effect, we can define a general routine called <tt>print_snippet</tt> which will recursively take care of printing each snippet contents and resolve any references.</p></div>
+<div class="para"><p>The spaces preceding the reference are used to indent the referenced snippet. In a recursive reference, the indentation must be summed up.</p></div>
+<div class="para"><p>Given such a routine, emitting the output resolves to printing the <em>root</em> snippet <tt>*</tt>, with no indentation.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;emit-output&gt;=
+print_snippet('*', '')</tt></pre>
+</div></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;print_snippet-definition&gt;=
+def print_snippet(name,indent):
+    for line in snippets[name]:
+        &lt;web-reference-directive-regex&gt;
+        m = re.match(WEB_REFERENCE,line)
+        if not m:
+            sys.stdout.write(indent+line)
+            continue
+        print_snippet(m.group(2),indent+m.group(1))</tt></pre>
+</div></div>
+<div class="para"><p>A WEB reference directive is a line where a code snippet name is delimited by angle brackets, and appears on its own, optionally preceded by spaces. The spaces in front of the reference <strong>are</strong> important: they will be used to indent the content of every line contained in the referenced snippet. And this indentation will recursively apply to any snippet referenced by it.</p></div>
+<div class="para"><p>Within the regular expression we save the spacing in front of the first angle bracket as a group, so that we can use its content as indentation.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;web-reference-directive-regex&gt;=
+WEB_REFERENCE = r'''^(\s*)&lt;([-\w]+)&gt;\s*$'''</tt></pre>
+</div></div>
+<div class="para"><p>We must import the regular expression module in order to identify each line.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;imports&gt;=
+import re</tt></pre>
+</div></div>
+</div>
+<h2 id="_sha_bang_and_copyright">Sha Bang and Copyright</h2>
+<div class="sectionbody">
+<div class="para"><p>In order to allow our Python program to work as an executable file, we must add the traditional shabang line at the beginning.</p></div>
+<div class="para"><p>We assume Python3 is installed and accessible from the environment's PATH.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;shabang&gt;=
+#!/usr/bin/env python3</tt></pre>
+</div></div>
+<div class="para"><p>We also want the copyright to be shown in the final module so that it can be printed too.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;module-copyright&gt;=
+_copyright = '''\
+etangle - tangles embedded WEB code snippets within asciidoc literate programs.
+&lt;copyright&gt;
+'''</tt></pre>
+</div></div>
+</div>
+<h2 id="_etangle_py">etangle.py</h2>
+<div class="sectionbody">
+<div class="para"><p>A simple Python script will incorporate all the elements we defined in the previous sections in the correct order:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;*&gt;=
+&lt;shabang&gt;
+
+&lt;module-copyright&gt;
+
+&lt;imports&gt;
+
+&lt;snippets-map-definition&gt;
+
+&lt;process_listing_block-definition&gt;
+
+&lt;print_snippet-definition&gt;
+
+&lt;input-scan-loop&gt;
+
+&lt;emit-output&gt;</tt></pre>
+</div></div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2009-10-06 01:17:04 BST
+</div>
+</div>
+</body>
+</html>

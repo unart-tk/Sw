@@ -1,0 +1,3 @@
+$myvar = 'boo';
+
+print $myvar;
